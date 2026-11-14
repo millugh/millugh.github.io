@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Free Spot Price Cheat Sheet for Card Breaks | RookieVaultCards</title>
+  <meta name="description" content="New to card breaks? A free cheat sheet that explains how spot prices are set, so you know what you're looking at before you buy in. No sign-up hoops, just a quick reference.">
+  <link rel="canonical" href="https://millugh.github.io/">
+  <meta name="theme-color" content="#1B3D30">
+  <meta name="author" content="RookieVaultCards">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RookieVaultCards">
+  <meta property="og:title" content="Free Spot Price Cheat Sheet for Card Breaks">
+  <meta property="og:description" content="New to card breaks? A free cheat sheet that explains how spot prices are set, so you know what you're looking at before you buy in.">
+  <meta property="og:url" content="https://millugh.github.io/">
+  <meta property="og:image" content="https://public-files.gumroad.com/61qas5qf6n1a464k8yderxkxj660">
+  <meta property="og:image:alt" content="Cover of the free RookieVaultCards Spot Price Cheat Sheet">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@charts225">
+  <meta name="twitter:title" content="Free Spot Price Cheat Sheet for Card Breaks">
+  <meta name="twitter:description" content="New to card breaks? A free cheat sheet that explains how spot prices are set, so you know what you're looking at before you buy in.">
+  <meta name="twitter:image" content="https://public-files.gumroad.com/61qas5qf6n1a464k8yderxkxj660">
+  <style>
+    :root {
+      --paper: #F3EDE1;
+      --paper-2: #E8E0D0;
+      --ink: #1A1915;
+      --muted: #5C5850;
+      --line: #C9BFAE;
+      --forest: #1B3D30;
+      --forest-2: #143026;
+      --brass: #8A6A2F;
+      --white: #FFFcf6;
+      --focus: #1B3D30;
+      --danger: #7A2E2E;
+      --shadow: 0 12px 40px rgba(26, 25, 21, 0.10);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", ui-serif, serif;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, rgba(243,237,225,0.92), rgba(243,237,225,0.92)),
+        repeating-linear-gradient(
+          0deg,
+          transparent 0,
+          transparent 27px,
+          rgba(201,191,174,0.35) 28px
+        );
+      background-color: var(--paper);
+      line-height: 1.55;
+      font-size: 1.0625rem;
+    }
+    .skip {
+      position: absolute;
+      left: 0.75rem;
+      top: -3rem;
+      background: var(--forest);
+      color: var(--white);
+      padding: 0.5rem 0.85rem;
+      border-radius: 4px;
+      z-index: 10;
+      text-decoration: none;
+    }
+    .skip:focus { top: 0.75rem; }
+    .wrap {
+      width: min(40rem, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1.5rem 0 3rem;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.25rem 0 1.5rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      text-decoration: none;
+      color: inherit;
+    }
+    .mark {
+      width: 2.25rem;
+      height: 2.25rem;
+      flex: 0 0 auto;
+    }
+    .brand-name {
+      font-family: "Palatino Linotype", Palatino, Georgia, serif;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+    }
+    .handle {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .handle:hover, .handle:focus-visible { color: var(--forest); text-decoration: underline; }
+    main { padding-top: 2rem; }
+    .kicker {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brass);
+      font-weight: 600;
+      margin: 0 0 0.7rem;
+    }
+    h1 {
+      font-size: clamp(1.8rem, 5vw, 2.45rem);
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .lede {
+      font-size: 1.15rem;
+      color: var(--ink);
+      margin: 0 0 1.6rem;
+      max-width: 34rem;
+    }
+    .actions { margin: 0 0 2.4rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 4px;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1rem;
+      font-weight: 650;
+      text-decoration: none;
+      border: 2px solid var(--forest);
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--forest);
+      color: var(--white);
+    }
+    .btn-primary:hover { background: var(--forest-2); border-color: var(--forest-2); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--forest);
+      width: 100%;
+    }
+    .btn-secondary:hover { background: rgba(27,61,48,0.07); }
+    .btn:focus-visible, a:focus-visible, input:focus-visible {
+      outline: 3px solid var(--forest);
+      outline-offset: 3px;
+    }
+    .note {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 0.7rem 0 0;
+    }
+    h2 {
+      font-size: 1.35rem;
+      margin: 0 0 0.85rem;
+    }
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1.35rem 1.35rem 1.15rem;
+      box-shadow: var(--shadow);
+      margin: 0 0 1.25rem;
+    }
+    .item { margin: 0 0 1.25rem; }
+    .item:last-child { margin-bottom: 0; }
+    .item h3 {
+      font-size: 1.05rem;
+      margin: 0 0 0.2rem;
+    }
+    .meta {
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 0.55rem;
+    }
+    ul {
+      margin: 0;
+      padding: 0 0 0 1.15rem;
+    }
+    li { margin: 0 0 0.4rem; }
+    li:last-child { margin-bottom: 0; }
+    #signup { scroll-margin-top: 1rem; }
+    form {
+      display: grid;
+      gap: 0.85rem;
+    }
+    .fields {
+      display: grid;
+      gap: 0.85rem;
+    }
+    @media (min-width: 560px) {
+      .fields { grid-template-columns: 1fr 1fr; }
+    }
+    label {
+      display: block;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 0.82rem;
+      font-weight: 650;
+      margin-bottom: 0.3rem;
+    }
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      min-height: 3rem;
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--white);
+      color: var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1rem;
+    }
+    input:user-invalid { border-color: var(--danger); }
+    .hp {
+      position: absolute;
+      left: -10000px;
+      top: auto;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+    .thanks {
+      background: #E7F0EA;
+      border: 1px solid #C3D6CB;
+      border-radius: 8px;
+      padding: 1.1rem 1.2rem;
+      margin: 0 0 1.25rem;
+    }
+    .thanks h2 { margin-bottom: 0.4rem; }
+    .thanks p { margin: 0; }
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid var(--line);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    footer p { margin: 0 0 0.7rem; }
+    footer a { color: var(--forest); }
+    .hidden { display: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="#main">
+        <svg class="mark" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+          <rect x="1.5" y="1.5" width="33" height="33" rx="4" fill="#1B3D30"/>
+          <rect x="8" y="10" width="20" height="16" rx="1.5" fill="none" stroke="#F3EDE1" stroke-width="1.6"/>
+          <path d="M18 16.2a2.4 2.4 0 0 1 2.4 2.4v2.2h-4.8v-2.2a2.4 2.4 0 0 1 2.4-2.4z" fill="#F3EDE1"/>
+        </svg>
+        <span class="brand-name">RookieVaultCards</span>
+      </a>
+      <a class="handle" href="https://x.com/charts225">@charts225</a>
+    </header>
+
+    <main id="main">
+      <p class="kicker">Free reference &middot; Card breaks</p>
+      <h1>New to card breaks? A free cheat sheet that explains how spot prices are set.</h1>
+      <p class="lede">So you know what you're looking at before you buy in. No sign-up hoops, just a quick reference.</p>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="https://mattitude4305.gumroad.com/l/spot-price-cheat-sheet?utm_source=x">Get the free cheat sheet</a>
+        <p class="note">Hosted on Gumroad. You can name a price of $0. No account is required to grab the PDFs.</p>
+      </div>
+
+      <section class="panel" aria-labelledby="inside-title">
+        <h2 id="inside-title">What's inside</h2>
+        <p>Two free PDFs, with dated sources. Here's exactly what they cover:</p>
+
+        <div class="item">
+          <h3>Spot Price Cheat Sheet</h3>
+          <p class="meta">2 pages, US Letter</p>
+          <ul>
+            <li>The spot-price formula, including platform commission, payment processing, the flat $0.30 per-order fee, and fees on buyer-paid shipping</li>
+            <li>Whatnot and eBay Live fee presets, checked against official pages on November 3, 2026</li>
+            <li>A worked example using a $300 box, 32 spots, and $1.50 in supplies per spot</li>
+            <li>How many spots need to sell to cover costs at a sample list price</li>
+            <li>A note on a fee that simpler calculators often skip</li>
+            <li>A 10-item &ldquo;When NOT to break&rdquo; list</li>
+            <li>A quick pricing checklist</li>
+          </ul>
+        </div>
+
+        <div class="item">
+          <h3>Whatnot Break Rules Checklist</h3>
+          <p class="meta">1 page</p>
+          <ul>
+            <li>Randomizing, unsold spots, giveaways, shipping, and buyer-protection rules in checklist form</li>
+            <li>Every item has a dated source link to Whatnot's Help Center, so you can recheck it</li>
+          </ul>
+        </div>
+      </section>
+
+      <div id="thanks-panel" class="thanks hidden" tabindex="-1" role="status">
+        <h2>You're on the list.</h2>
+        <p>Thanks for signing up. You can still grab the free cheat sheet above if you haven't already. No further action is needed.</p>
+      </div>
+
+      <section id="signup-wrap" class="panel" aria-labelledby="signup-title">
+        <h2 id="signup-title">Want a note when new references come out?</h2>
+        <p>Optional. This is only for a future email list. You can get the cheat sheet above without signing up.</p>
+        <form id="signup" action="https://formsubmit.co/mattmiller38@gmail.com" method="POST" accept-charset="UTF-8">
+          <input type="hidden" name="_subject" value="RookieVaultCards list signup: Spot Price Cheat Sheet">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://millugh.github.io/?thanks=1">
+          <input type="hidden" name="source" value="spot-price-cheat-sheet-landing">
+          <div class="hp" aria-hidden="true">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="_honey" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="fields">
+            <div>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required maxlength="120">
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required maxlength="200">
+            </div>
+          </div>
+          <button class="btn btn-secondary" type="submit">Join the list</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>RookieVaultCards &middot; Baton Rouge &middot; <a href="https://x.com/charts225">@charts225</a></p>
+      <p>Education only. Not legal, tax, or financial advice. Not affiliated with, sponsored by, or endorsed by Whatnot, eBay, or any league, team, player, grading company, or card manufacturer. Fees and rules change, so check the current official pages (linked in the PDFs) before every break.</p>
+    </footer>
+  </div>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      if (!params.has("thanks")) return;
+      var formWrap = document.getElementById("signup-wrap");
+      var thanks = document.getElementById("thanks-panel");
+      if (formWrap) formWrap.classList.add("hidden");
+      if (thanks) {
+        thanks.classList.remove("hidden");
+        thanks.focus();
+      }
+    })();
+  </script>
+</body>
+</html>
